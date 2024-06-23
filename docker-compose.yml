@@ -2,7 +2,7 @@
 version: '3'
 services:
   evolution-manager:
-    image: "gabrielpastori1/evolution-manager:latest"
+    image: "cadao7/manager:latest"
     ports:
       - "9615:9615"
     labels:
