@@ -77,6 +77,7 @@ Esses dois passos instalarão o CLI do Evolution Manager globalmente em seu sist
        - `stop`: Para o serviço no PM2.
        - `restart`: Reinicia o serviço no PM2.
        - `delete`: Remove o serviço do PM2.
+        - `delete`: Remove o serviço do PM2.
 
 3. **Executando o Projeto com o PM2**:
    - Para configurar e gerenciar o serviço com o PM2, comece com o comando de configuração:
