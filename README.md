@@ -1,152 +1,143 @@
 # Evolution Manager
 
-## Introduction
+## Introdução
 
-Evolution Manager is an open-source management tool for the Evolution API, designed to streamline the administration and monitoring of instances. It can be accessed online at [Evolution Manager](https://github.com/gabrielpastori1/evolution-manager).
+O Evolution Manager é uma ferramenta de gerenciamento open-source para a Evolution API, projetada para facilitar a administração e monitoramento de instâncias. Pode ser acessada online em [Evolution Manager](https://github.com/gabrielpastori1/evolution-manager).
+
+## Funcionalidades
+
+- **Gerenciamento de Instâncias**: Criação, gerenciamento e exclusão de instâncias.
+- **Configurações de Instância**: Personalização das configurações de comportamento (por exemplo, desativar chamadas, modo sempre online), integração com webhook, RabbitMQ, WebSocket, Chatwoot e configurações do Typebot.
+- **Utilitários para Usuários**: Verificação de números de usuários, busca por conversas e grupos.
+
+## Limitações
+
+- A versão hospedada na Vercel requer que o servidor tenha um certificado SSL.
+
+## Tecnologia
+
+- O projeto é desenvolvido usando Vue.js v3 e Vuetify.
+
+## Evolution-Manager CLI - Documentação
+
+Para informações detalhadas sobre como usar o Evolution-Manager CLI, consulte a documentação disponível nos seguintes links:
+
+🔗 Documentação completa: [Documentação em Português](https://github.com/gabrielpastori1/evolution-manager/blob/main/docs/pt_br/cli.md)
+
+## Imagem Docker - Documentação
+
+Para obter informações detalhadas sobre como usar a imagem Docker, incluindo configurações e exemplos, acesse a nossa documentação completa. Você encontrará instruções passo a passo, bem como dicas úteis para maximizar o uso da imagem Docker do Evolution Manager.
+
+🔗 Documentação completa: [Documentação em Português](https://github.com/gabrielpastori1/evolution-manager/tree/main/docs/pt_br/docker.md)
 
 ---
 
-🇧🇷 **Atenção, Comunidade Brasileira!** 🇧🇷
+## Auto-Hospedagem - CLI e PM2 do Evolution Manager
 
-Se você é um desenvolvedor ou usuário brasileiro interessado no Evolution Manager, temos boas notícias! Agora você pode acessar a documentação completa do projeto em português. Isso facilitará seu entendimento e uso desta ferramenta incrível. Clique no link abaixo para ler o README em português:
+### Direto ao Ponto: Configuração Rápida com PM2
 
-🔗 [Leia o README em Português](https://github.com/gabrielpastori1/evolution-manager/blob/main/README.pt_BR.md)
+Para instalar rapidamente o Evolution Manager globalmente e configurá-lo com o PM2, siga estes comandos:
 
----
-
-## Features
-
-- **Instance Management**: Create, manage, and delete instances.
-- **Instance Settings**: Customize behavior settings (e.g., disabling calls, always-online mode), webhook integration, RabbitMQ, WebSocket, Chatwoot, and Typebot configurations.
-- **User Utilities**: Check user numbers, search for conversations, and find groups.
-
-## Limitations
-
-- The version hosted on Vercel requires the server to have an SSL certificate.
-
-## Technology
-
-- The project is built using Vue.js v3 and Vuetify.
-
-## Evolution-Manager CLI - Documentation
-
-For detailed information on how to use the Evolution-Manager CLI, please refer to the documentation available at the following links:
-
-🔗 Full Documentation:  [Documentation in English](https://github.com/gabrielpastori1/evolution-manager/blob/main/docs/en/cli.md)
-
-## Docker Image - Documentation
-
-For detailed information on using the Docker image, including configurations and examples, please refer to our comprehensive documentation. You will find step-by-step instructions, as well as helpful tips to make the most of the Evolution Manager's Docker image.
-
-🔗 Full Documentation: [Documentation in English](https://github.com/gabrielpastori1/evolution-manager/tree/main/docs/en/docker.md)
-
-## Self-Hosted - Evolution Manager CLI and PM2
-
-### Straight to the Point: Quick Setup with PM2
-
-To quickly install Evolution Manager globally and set it up with PM2, follow these commands:
-
-1. **Install Evolution Manager Globally**:
+1. **Instalar o Evolution Manager Globalmente**:
 
    ```bash
    npm install -g evolution-manager
    ```
 
-2. **Set Up PM2 for Evolution Manager**:
+2. **Configurar PM2 para o Evolution Manager**:
 
    ```bash
    evolution-manager pm2 setup
    ```
 
-These two steps will install the Evolution Manager CLI globally on your system and configure it to run with PM2, a powerful process manager.
+Estes dois passos instalarão o CLI do Evolution Manager globalmente em seu sistema e o configurarão para funcionar com o PM2, um gerenciador de processos poderoso.
 
-### Installation and Configuration
+### Instalação e Configuração
 
-These two steps will install the Evolution Manager CLI globally on your system and configure it to run with PM2, a powerful process manager.
+Esses dois passos instalarão o CLI do Evolution Manager globalmente em seu sistema e o configurarão para funcionar com o PM2, um gerenciador de processos poderoso.
 
-1. **Install Evolution Manager Globally**:
-   - Ensure Node.js and NPM are installed on your system.
-   - Install Evolution Manager globally using NPM to access the CLI (Command Line Interface):
+1. **Instalar o Evolution Manager Globalmente**:
+   - Certifique-se de ter o Node.js e o NPM instalados em seu sistema.
+   - Instale o Evolution Manager globalmente usando o NPM para acessar o CLI (Interface de Linha de Comando):
 
      ```bash
      npm install -g evolution-manager
      ```
 
-2. **Using the CLI**:
-   - After installation, access the CLI commands by typing `evolution-manager` in your terminal.
-   - Available commands include:
-     - `help`: Displays a list of available commands and their descriptions.
-     - `server`: Server-related operations.
-       - `start [--port=9615]`: Starts the server on the specified port (default: 9615).
-       - `build`: Builds the project.
-     - `pm2`: Manages the process with PM2.
-       - `setup`: Sets up PM2 for the project.
-       - `start`: Starts the service with PM2.
-       - `stop`: Stops the service in PM2.
-       - `restart`: Restarts the service in PM2.
-       - `delete`: Removes the service from PM2.
+2. **Usando o CLI**:
+   - Após a instalação, acesse os comandos do CLI digitando `evolution-manager` em seu terminal.
+   - Os comandos disponíveis incluem:
+     - `help`: Exibe uma lista de comandos disponíveis e suas descrições.
+     - `server`: Operações relacionadas ao servidor.
+       - `start [--port=9615]`: Inicia o servidor na porta especificada (padrão: 9615).
+       - `build`: Constrói o projeto.
+     - `pm2`: Gerencia o processo com o PM2.
+       - `setup`: Configura o PM2 para o projeto.
+       - `start`: Inicia o serviço com o PM2.
+       - `stop`: Para o serviço no PM2.
+       - `restart`: Reinicia o serviço no PM2.
+       - `delete`: Remove o serviço do PM2.
 
-3. **Running the Project with PM2**:
-   - To set up and manage the service with PM2, start with the setup command:
+3. **Executando o Projeto com o PM2**:
+   - Para configurar e gerenciar o serviço com o PM2, comece com o comando de configuração:
 
      ```bash
      evolution-manager pm2 setup
      ```
 
-   - Then, you can start, stop, restart, or delete the service using the respective `pm2` commands in the CLI.
+   - Em seguida, você pode iniciar, parar, reiniciar ou excluir o serviço usando os respectivos comandos `pm2` no CLI.
 
-These instructions provide a streamlined method for managing Evolution Manager across various systems, utilizing PM2 for efficient service start-up, maintenance, and control.
+Estas instruções fornecem um método simplificado para gerenciar o Evolution Manager em vários sistemas, utilizando o PM2 para um eficiente início de serviço
 
-## Development Setup
+## Configuração para Desenvolvimento
 
-1. **Prerequisites**: Ensure you have `yarn` installed on your system.
-2. **Clone the Repository**:
+1. **Pré-requisitos**: Certifique-se de ter o `yarn` instalado no seu sistema.
+2. **Clonar o Repositório**:
 
    ```bash
    git clone https://github.com/gabrielpastori1/evolution-manager.git
    cd evolution-manager
    ```
 
-3. **Install Dependencies**:
+3. **Instalar Dependências**:
 
    ```bash
    yarn install
    ```
 
-4. **Run Development Server**:
+4. **Executar o Servidor de Desenvolvimento**:
 
    ```bash
    yarn dev
    ```
 
-   This will start a local development server. You can access the app at `localhost:8080`.
+   Isso iniciará um servidor de desenvolvimento local. Você pode acessar o aplicativo em `localhost:8080`.
 
-## Building the Project
+## Construção do Projeto
 
-To build the project for production, run:
+Para construir o projeto para produção, execute:
 
 ```bash
 yarn build
 ```
 
-This will create a `dist` folder with the compiled assets.
+Isso criará uma pasta `dist` com os ativos compilados.
 
-## Contributing
+## Contribuindo
 
-Contributions are an essential part of the Evolution Manager project. Whether you're contributing code, suggestions, or feedback, your input is invaluable. To facilitate contributions, we have included a direct means for donations:
+As contribuições são uma parte essencial do projeto Evolution Manager. Seja contribuindo com código, sugestões ou feedback, sua participação é inestimável. Para facilitar as contribuições, incluímos um meio direto para doações:
 
-### Making a Donation
+### Fazendo uma Doação
 
-If you wish to support the project financially, we have provided a QR code for Pix donations. Your generosity helps in maintaining and evolving this open-source tool.
+Se desejar apoiar o projeto financeiramente, disponibilizamos um QR code para doações via Pix. Sua generosidade ajuda na manutenção e evolução desta ferramenta de código aberto.
 
-<img src="https://github.com/gabrielpastori1/evolution-manager/blob/main/src/assets/pix.svg" width="300" alt="Pix Donation QR Code">
 
-### Contributing Code or Ideas
+### Contribuindo com Código ou Ideias
 
-We also welcome code contributions and innovative ideas. If you're interested in contributing in this way, please read our contributing guidelines for more information on how to get started.
+Também recebemos contribuições de código e ideias inovadoras. Se você tem interesse em contribuir dessa forma, por favor, leia nossas diretrizes de contribuição para mais informações sobre como começar.
 
-Your support, in any form, makes a significant difference and is greatly appreciated. Thank you for being a part of the Evolution Manager community!
+Seu apoio, de qualquer forma, faz uma grande diferença e é muito apreciado. Obrigado por fazer parte da comunidade Evolution Manager!
 
-## License
+## Licença
 
-This project is open-source and available under the [MIT License](LICENSE.md).
+Este projeto é de código aberto e está disponível sob a [Licença MIT](LICENSE.md).
